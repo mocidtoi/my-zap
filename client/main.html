@@ -1,0 +1,34 @@
+<head>
+  <title>My ZAP</title>
+</head>
+
+<body>
+  <div class="container">
+    {{> cmdcontrol }}
+  </div>
+  <div class="container">
+    {{> pjcontrol }}
+  </div>
+  <div class="container">
+    {{> remotelog }}
+  </div>
+</body>
+
+<template name="remotelog">
+  <div id="log">{{dummy}}</div>
+</template>
+
+<template name="pjcontrol">
+  <button>send PermitJoin</button>
+  <p><div name="join-info">{{joininfo}}</div></p>
+</template>
+
+<template name="cmdcontrol">
+  <button id="on">on</button>
+  <button id="off">off</button>
+  <button id="check">check</button><br/>
+  Button-ID:<input type="text" id="btnIdInput" name="btnIdInput" /><br/>
+  Address:<input type="text" id="addrInput" name="addrInput" /><br/>
+  Endpoint:<input type="text" id="endpointInput" name="endpointInput" />
+</template>
+
